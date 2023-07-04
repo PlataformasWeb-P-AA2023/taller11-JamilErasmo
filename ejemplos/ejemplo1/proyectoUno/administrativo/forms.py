@@ -45,6 +45,7 @@ class EstudianteForm(ModelForm):
             raise forms.ValidationError("Ingrese correo válido para la Universidad")
         return valor
 
+        
 
 class NumeroTelefonicoForm(ModelForm):
     class Meta:
