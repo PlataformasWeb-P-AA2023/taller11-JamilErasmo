@@ -22,18 +22,7 @@ def index(request):
 
 
 def obtener_edificio(request, id):
-    """
-        Listar los registros del modelo Estudiante,
-        obtenidos de la base de datos.
-    """
-    # a través del ORM de django se obtiene
-    # los registros de la entidad; el listado obtenido
-    # se lo almacena en una variable llamada
-    # estudiantes
     edificios = Edificio.objects.get(pk=id)
-    # en la variable tipo diccionario llamada informacion_template
-    # se agregará la información que estará disponible
-    # en el template
     informacion_template = {'edificio': edificios}
     return render(request, 'obtenerEdificio.html', informacion_template)
 
